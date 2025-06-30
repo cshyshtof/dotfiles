@@ -8,3 +8,7 @@ code --install-extension njpwerner.autodocstring
 code --install-extension aaron-bond.better-comments
 code --install-extension samuelcolvin.jinjahtml
 code --install-extension wmaurer.change-case
+code --install-extension ms-vscode.powershell
+code --install-extension almenon.arepl
+
+
