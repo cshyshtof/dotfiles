@@ -32,6 +32,7 @@
 			"editor.wordWrap": "off"
 		}
         "python.analysis.inlayHints.functionReturnTypes": true,
-        "python.analysis.inlayHints.callArgumentNames": "off"
+        "python.analysis.inlayHints.callArgumentNames": "off",
+        "python.testing.pytestEnabled": true
 	},
 }
