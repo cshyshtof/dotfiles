@@ -10,5 +10,5 @@ code --install-extension samuelcolvin.jinjahtml
 code --install-extension wmaurer.change-case
 code --install-extension ms-vscode.powershell
 code --install-extension almenon.arepl
-
+code --install-extension littlefoxteam.vscode-python-test-adapter
 
