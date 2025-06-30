@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.quickSuggestionsDelay": 500,
+		"editor.smoothScrolling": true,
+		"editor.padding.bottom": 30,
+		"editor.padding.top": 30,
+		"editor.acceptSuggestionOnEnter": "off",
+		"editor.wordBasedSuggestions": "off",
+		"editor.wordWrapColumn": 80,
+		"editor.rulers": [
+			72,
+			79
+		],
+		"files.autoSave": "onFocusChange",
+		"workbench.editor.enablePreviewFromQuickOpen": true,
+		"cSpell.language": "en,pl",
+		"terminal.integrated.defaultProfile.windows": "Git Bash",
+		"editor.wordWrap": "wordWrapColumn",
+		"python.formatting.provider": "black",
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit"
+		},
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#9e0404"
+		},
+		"[yaml]": {
+			"editor.wordWrap": "off"
+		}
+	},
+}
