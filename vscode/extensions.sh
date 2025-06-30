@@ -11,4 +11,7 @@ code --install-extension wmaurer.change-case
 code --install-extension ms-vscode.powershell
 code --install-extension almenon.arepl
 code --install-extension littlefoxteam.vscode-python-test-adapter
+code --install-extension cardinal90.multi-cursor-case-preserve
+code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension humao.rest-client
 
