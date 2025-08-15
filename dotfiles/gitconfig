@@ -24,6 +24,9 @@
 	changed = yellow bold
 	untracked = red bold
 
+[init]
+    defaultBranch = main
+
 [apply]
 	whitespace = fix
 
