@@ -1,0 +1,120 @@
+{
+    // On Save actions
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": false,
+    "files.trimTrailingWhitespace": true,
+
+    // Editor look
+	"editor.smoothScrolling": true,
+	"editor.padding.bottom": 30,
+	"editor.padding.top": 30,
+    "editor.wordWrap": "on",
+	"editor.rulers": [
+		72,
+		79,
+        160
+	],
+
+	"workbench.tree.indent": 20,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#65c89b",
+        "activityBar.background": "#65c89b",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#945bc4",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#65c89b",
+        "statusBar.background": "#42b883",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#359268",
+        "statusBarItem.remoteBackground": "#42b883",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#42b883",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#42b88399",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+
+    // Intellisense
+    "editor.quickSuggestionsDelay": 3000,
+	"editor.acceptSuggestionOnEnter": "off",
+	"editor.wordBasedSuggestions": "off",
+
+    // Font
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+
+    // Terminal
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+    // Copy Paste
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+
+    // YAML
+	"[yaml]": {
+		"editor.wordWrap": "off"
+	},
+
+    // Ansible
+	"files.associations": {
+		"*.yml": "ansible",
+        "*.mdc": "markdown"
+  },
+	},
+    "ansible.validation.lint.enabled": true,
+    "ansible.validation.lint.path": "ansible-lint",
+    "ansible.completion.provideContextAwarePredictions": true,
+    "ansible.python.interpreterPath": "/bin/python3",
+    "[ansible]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": false,
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+        }
+    },
+
+    // Python
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": false,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "on"
+        }
+    },
+
+    // Spell checking
+    "cSpell.language": "en,pl",
+    "cSpell.customDictionaries": {
+        "project-spellcheck": {
+            "name": "project-spellcheck",
+            "path": "${workspaceRoot}/project-spellcheck.txt",
+            "description": "Words used in this project",
+            "addWords": true
+        },
+        "custom": true,
+    },
+    "cSpell.dictionaries": [
+        "project-spellcheck.txt"
+    ],
+    "cSpell.flagWords": [
+        "dupa"
+    ],
+    "cSpell.suggestionMenuType": "quickFix",
+    "cSpell.diagnosticLevel": "Hint",
+
+    // Makefile
+    "makefile.configureOnOpen": false
+}
