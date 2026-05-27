@@ -7,6 +7,7 @@
 	pager = delta
 	trustctime = false
 	precomposeunicode = false
+
 [color]
 	ui = auto
 
