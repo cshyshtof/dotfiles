@@ -1,0 +1,26 @@
+{
+    "recommendations": [
+        "anysphere.remote-containers",
+        "anysphere.remote-ssh",
+        "darkriszty.markdown-table-prettify",
+        "davidanson.vscode-markdownlint",
+        "eriklynd.json-tools",
+        "github.vscode-github-actions",
+        "mhutchie.git-graph",
+        "mikestead.dotenv",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-vscode.makefile-tools",
+        "ms-vscode.powershell",
+        "njpwerner.autodocstring",
+        "pkief.material-icon-theme",
+        "redhat.ansible-yaml",
+        "redhat.ansible",
+        "samuelcolvin.jinjahtml",
+        "streetsidesoftware.code-spell-checker-polish",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "yzhang.markdown-all-in-one"
+    ]
+}

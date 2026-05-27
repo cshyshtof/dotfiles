@@ -1,0 +1,43 @@
+---
+extends: default
+
+ignore: |
+  .venv/
+
+rules:
+  line-length:
+    max: 160
+    level: warning
+
+  document-start:
+    present: true
+
+  truthy:
+    allowed-values: ['true', 'false', 'on', 'off']
+    check-keys: false
+    level: error
+
+  indentation:
+    spaces: 2
+    indent-sequences: true
+    check-multi-line-strings: false
+
+  comments:
+    min-spaces-from-content: 1
+    require-starting-space: true
+
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 0
+
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+
+  colons:
+    max-spaces-before: 0
+    max-spaces-after: 1
+
+  new-line-at-end-of-file: enable
+
+  trailing-spaces: enable

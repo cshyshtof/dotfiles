@@ -3,7 +3,6 @@ case $- in
       *) return;;
 esac
 
-export OLLAMA_ORIGINS=moz-extension://*
 export TERM="xterm-256color"
 export CLICOLOR=1
 export HISTFILESIZE="6000"
@@ -34,6 +33,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+umask 077
+
 alias ls='ls -aA --color=always'
 alias l="ls -lF --color"
 alias ll="ls -laF --color"
@@ -44,10 +45,44 @@ alias egrep='egrep --color=auto'
 alias python='/usr/bin/python3'
 alias tree='tree -CAhF --dirsfirst'
 alias vi='vim'
+alias cursor='cursor --classic'
 
-if [ -f "/etc/motd.sh" ]; then
-  source /etc/motd.sh
-fi
+parse_git_bg() {
+  if git rev-parse --is-inside-work-tree &>/dev/null; then
+    local branch=$(git branch --show-current)
+    local status=$(git status --porcelain 2>/dev/null)
 
-PS1="\[\e[0m\]\[\e[38;5;35m\]╭─(\[\e[38;5;38m\]\t\[\e[38;5;35m\])-(\[\e[38;5;38m\]\H\[\e[38;5;35m\])-(\[\e[38;5;38m\]\w\[\e[38;5;35m\])\n\[\e[38;5;35m\]╰──\\$ \[\e[0m\]"
+    # Definicje kolorów (ANSI)
+    local C_RESET='\e[0m'
+    local C_BORDER='\e[38;5;35m'  # Zielony (twój ramkowy)
+    local C_BRANCH='\e[38;5;213m' # Jasny fiolet/różowy (kontrast)
+    local C_UNSTAGED='\e[38;5;214m' # Pomarańczowy (*)
+    local C_STAGED='\e[38;5;196m'   # Czerwony (+)
 
+    local state=""
+
+    # Sprawdzanie zmian
+    if [[ -n $(echo "$status" | grep '^.[ADMRCU]') ]]; then
+      state+="${C_UNSTAGED}*"
+    fi
+    if [[ -n $(echo "$status" | grep '^[ADMRCU]') ]]; then
+      state+="${C_STAGED}+"
+    fi
+
+    # Złożenie segmentu: -(branch*+)
+    echo -ne "${C_BORDER}-(${C_BRANCH}${branch}${state}${C_BORDER})"
+  fi
+}
+
+# Używamy PROMPT_COMMAND, aby poprawnie przeliczać kolory przy każdym odświeżeniu
+set_prompt() {
+    local EXIT_CODE=$?
+    local B_GRN="\[\e[38;5;35m\]"
+    local B_BLU="\[\e[38;5;38m\]"
+    local RESET="\[\e[0m\]"
+
+    # Twoja oryginalna struktura + wywołanie funkcji git
+    PS1="${RESET}${B_GRN}╭─(${B_BLU}\t${B_GRN})-(${B_BLU}\H${B_GRN})-(${B_BLU}\w${B_GRN})$(parse_git_bg)\n${B_GRN}╰──\\$ ${RESET}"
+}
+
+PROMPT_COMMAND=set_prompt
